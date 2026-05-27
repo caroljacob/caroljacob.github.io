@@ -18,10 +18,11 @@ Poster Highlights
 
 Key poster projects presented as compact, scannable cards for quick browsing and citation.
 
-Recognition
+Awards & Acknowledgements
 
-Selected awards and acknowledgements, displayed in two balanced panels for clarity and readability.
+Selected awards and acknowledgements presented in two balanced panels for clear, approachable reading.
+
 
 Presentation
 
-Content is presented across four compact panels to maintain a clean rhythm and reduce visual clutter.
+Arranged in four balanced panels to preserve a clean, unobtrusive layout.
