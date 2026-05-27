@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import SectionBackdrop from "../section-backdrop";
 
 const AboutMe = () => {
     const skills = [
@@ -36,7 +37,7 @@ const AboutMe = () => {
     return (
         <section>
             <div className="container">
-                <div className="border-x border-primary/10 bg-[url('/images/about-me/about-me-bg.svg')] bg-cover bg-center bg-no-repeat">
+                <SectionBackdrop accent="radial-gradient(circle, rgba(122, 162, 255, 0.34) 0%, rgba(122, 162, 255, 0.12) 36%, transparent 72%)">
                     <div className="flex flex-col gap-9 sm:gap-12 max-w-3xl mx-auto px-4 sm:px-7 py-11 md:py-20">
                         <div className="flex flex-col gap-4">
                             <p className="text-sm tracking-[2px] text-primary uppercase font-medium">About</p>
@@ -65,7 +66,7 @@ const AboutMe = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </SectionBackdrop>
             </div>
         </section>
     )

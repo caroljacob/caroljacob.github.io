@@ -1,14 +1,18 @@
 import { educationData } from "../../../../data/portfolio-data";
+import SectionHeading from "../section-heading";
+import SectionBackdrop from "../section-backdrop";
 
 const Education = () => {
     return (
         <section>
             <div className="container">
-                <div className="border-x border-primary/10">
-                    <div className="flex flex-col max-w-3xl mx-auto py-10 px-4 sm:px-7">
-                        <div className="flex flex-col xs:flex-row gap-5 items-center justify-between">
-                            <p className="text-sm tracking-[2px] text-primary uppercase font-medium">Education</p>
-                        </div>
+                <SectionBackdrop accent="radial-gradient(circle, rgba(126, 200, 227, 0.32) 0%, rgba(126, 200, 227, 0.12) 36%, transparent 72%)">
+                    <div className="max-w-3xl mx-auto py-10 px-4 sm:px-7">
+                        <SectionHeading
+                            eyebrow="Academic background"
+                            title="Education"
+                            description="A quick view of the programs and institutions that shaped the portfolio."
+                        />
                     </div>
 
                     <div className="border-t border-primary/10">
@@ -42,8 +46,7 @@ const Education = () => {
                             </div>
                         </div>
                     </div>
-
-                </div>
+                </SectionBackdrop>
             </div>
         </section>
     )

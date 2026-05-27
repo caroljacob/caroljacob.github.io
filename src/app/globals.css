@@ -51,6 +51,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background: #ffffff;
 }
 
 @theme {
@@ -60,6 +61,31 @@ body {
 @layer utilities {
   .container {
     @apply w-full max-w-[70.9rem] mx-auto mt-0 mb-0 py-0 sm:px-7 px-5;
+  }
+
+  .scroll-panel {
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(28, 33, 43, 0.32) rgba(28, 33, 43, 0.06);
+  }
+
+  .scroll-panel::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .scroll-panel::-webkit-scrollbar-track {
+    background: rgba(28, 33, 43, 0.06);
+    border-radius: 9999px;
+  }
+
+  .scroll-panel::-webkit-scrollbar-thumb {
+    background: rgba(28, 33, 43, 0.28);
+    border-radius: 9999px;
+    border: 2px solid rgba(255, 255, 255, 0.95);
+  }
+
+  .scroll-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(28, 33, 43, 0.42);
   }
 
   .glass {

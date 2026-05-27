@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} relative isolate overflow-x-hidden bg-background text-foreground antialiased`}>
         <Header/>
         {children}
         <Footer/>

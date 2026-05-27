@@ -265,7 +265,7 @@ const LinkedinCarousel = () => {
                                 </button>
                             </div>
 
-                            <div className="grid max-h-[calc(92vh-78px)] grid-cols-1 lg:grid-cols-[1.25fr_0.95fr]">
+                            <div className="grid max-h-[calc(92vh-78px)] min-h-0 grid-cols-1 lg:grid-cols-[1.25fr_0.95fr]">
                                 <div className="relative min-h-[48vh] bg-[#f6f8fb]">
                                     {selectedPost.mediaType === "video" ? (
                                         <video
@@ -288,15 +288,28 @@ const LinkedinCarousel = () => {
                                     )}
                                 </div>
 
-                                <div className="flex flex-col gap-4 overflow-y-auto px-5 py-5">
-                                    <p className="text-sm text-secondary">{selectedPost.dateLabel}</p>
-                                    <p className="text-base leading-7 text-primary">{selectedPost.fullText}</p>
-                                    <div className="flex flex-wrap gap-2 pt-1">
-                                        {selectedPost.tags.map((tag: string, idx: number) => (
-                                            <span key={idx} className="rounded-full border border-primary/10 px-3 py-1 text-xs text-primary">
-                                                {tag}
-                                            </span>
-                                        ))}
+                                <div className="min-h-0 px-5 py-5">
+                                    <div className="flex h-full min-h-0 flex-col rounded-[1.5rem] border border-primary/10 bg-[linear-gradient(180deg,#ffffff_0%,#fbfcfe_100%)] p-4 sm:p-5 shadow-sm">
+                                        <div className="flex items-start justify-between gap-4 border-b border-primary/10 pb-4">
+                                            <div>
+                                                <p className="text-[11px] tracking-[2px] uppercase text-primary/60">Read full post</p>
+                                                <p className="mt-2 text-sm text-secondary">{selectedPost.dateLabel}</p>
+                                            </div>
+                                            <div className="rounded-full border border-primary/10 bg-white px-3 py-1 text-[11px] tracking-[2px] uppercase text-primary/50">
+                                                Scroll
+                                            </div>
+                                        </div>
+
+                                        <div className="min-h-0 flex-1 overflow-y-auto pr-2 pt-4">
+                                            <p className="text-base leading-7 text-primary">{selectedPost.fullText}</p>
+                                            <div className="mt-5 flex flex-wrap gap-2">
+                                                {selectedPost.tags.map((tag: string, idx: number) => (
+                                                    <span key={idx} className="rounded-full border border-primary/10 px-3 py-1 text-xs text-primary">
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

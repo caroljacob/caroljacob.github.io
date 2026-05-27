@@ -1,14 +1,18 @@
 import { projectOverview } from "../../../../data/portfolio-data";
+import SectionHeading from "../section-heading";
+import SectionBackdrop from "../section-backdrop";
 
 const ProjectOverview = () => {
     return (
         <section>
             <div className="container">
-                <div className="border-x border-primary/10">
+                <SectionBackdrop accent="radial-gradient(circle, rgba(158, 197, 162, 0.34) 0%, rgba(158, 197, 162, 0.12) 36%, transparent 72%)">
                     <div className="flex flex-col max-w-3xl mx-auto gap-8 sm:gap-10 px-4 sm:px-7 py-9 md:py-16">
-                        <div className="flex items-start justify-between gap-4">
-                            <p className="text-sm tracking-[2px] text-primary uppercase font-medium">Final Year Project</p>
-                        </div>
+                        <SectionHeading
+                            eyebrow="Final year project"
+                            title="Project Overview"
+                            description="A single featured research project with enough context to explain the problem, approach, and outcome."
+                        />
 
                         <div className="rounded-[1.75rem] border border-primary/10 bg-white p-5 sm:p-6 shadow-sm">
                             <p className="text-xs tracking-[2px] text-primary/60 uppercase">Featured research work</p>
@@ -27,9 +31,8 @@ const ProjectOverview = () => {
                                 ))}
                             </div>
                         </div>
-
                     </div>
-                </div>
+                </SectionBackdrop>
             </div>
         </section>
     )
