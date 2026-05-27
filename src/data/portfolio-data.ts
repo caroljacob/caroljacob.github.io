@@ -144,7 +144,7 @@ export const leadershipAndOutreach = {
         "Overall third rank with CGPA of 9.54 in first semester of B.Tech Biotechnology",
     ],
     outreachAndEvents: [
-        "Hosted/key events: Republic Day Parade, Civil Services Conclave, Department Investiture Ceremony",
+        "Hosted key events: Republic Day Parade, Civil Services Conclave, Department Investiture Ceremony",
         "Conducted social service events: old age home visits, tree plantation drives, blood donation drives, women empowerment programs, and school biotechnology exposure programs",
         "Participated in various government initiatives conducted at the university",
     ],

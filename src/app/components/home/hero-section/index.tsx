@@ -16,6 +16,19 @@ const HeroSection = () => {
                                 <Image src={'/images/hero-sec/new-user-img.png'} alt="user-img" width={145} height={145} className="border-4 border-white rounded-full" />
                                 <span className="absolute bottom-2.5 right-5 w-4 h-4 bg-green-500 border-2 border-white rounded-full" />
                             </div>
+                            <a
+                                href="https://hits.seeyoufarm.com"
+                                target="_blank"
+                                rel="noreferrer"
+                                aria-label="Profile hit counter"
+                                className="absolute right-4 top-4 sm:right-7 sm:top-7 inline-flex items-center rounded-full border border-primary/10 bg-white/95 px-3 py-2 shadow-sm transition-colors hover:bg-primary/5"
+                            >
+                                <img
+                                    src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fcaroljacob.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"
+                                    alt="Hits badge"
+                                    className="h-5 w-auto"
+                                />
+                            </a>
                             <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
                                 <div className="flex flex-col gap-3 pt-16 sm:pt-20 text-left">
                                     <div className="space-y-1">
