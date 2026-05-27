@@ -11,7 +11,6 @@ const Education = () => {
                         <SectionHeading
                             eyebrow="Academic background"
                             title="Education"
-                            description="A quick view of the programs and institutions that shaped the portfolio."
                         />
                     </div>
 

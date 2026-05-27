@@ -11,7 +11,6 @@ const SideProjects = () => {
                         <SectionHeading
                             eyebrow="Selected experiments"
                             title="Side Projects"
-                            description="A compact gallery of smaller builds and prototypes that still deserve a proper visual hierarchy."
                         />
                     </div>
                     <div className="border-t border-primary/10">

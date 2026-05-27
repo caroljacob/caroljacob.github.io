@@ -11,7 +11,6 @@ const ProjectOverview = () => {
                         <SectionHeading
                             eyebrow="Final year project"
                             title="Project Overview"
-                            description="A single featured research project with enough context to explain the problem, approach, and outcome."
                         />
 
                         <div className="rounded-[1.75rem] border border-primary/10 bg-white p-5 sm:p-6 shadow-sm">

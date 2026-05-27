@@ -11,7 +11,6 @@ const PosterPresentations = () => {
                         <SectionHeading
                             eyebrow="Research output"
                             title="Poster Presentations"
-                            description="Key poster work surfaced as compact cards for easier scanning."
                         />
                     </div>
                     <div className="border-t border-primary/10">

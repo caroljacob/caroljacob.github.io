@@ -30,7 +30,6 @@ const LeadershipOutreach = () => {
                         <SectionHeading
                             eyebrow="Community work"
                             title="Leadership & Outreach"
-                            description="Presented as four compact panels to match the rest of the page without adding visual noise."
                         />
                     </div>
                     <div className="border-t border-primary/10">

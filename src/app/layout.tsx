@@ -12,6 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Carol Jacob",
   description: "Carol Jacob - Biotechnology portfolio",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   icons: {
     icon: "/carol-jacob-icon.svg",
   },

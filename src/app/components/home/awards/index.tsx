@@ -11,7 +11,6 @@ const Awards = () => {
                         <SectionHeading
                             eyebrow="Recognition"
                             title="Awards & Scholarships"
-                            description="Recognition is separated into two small panels for clarity and balance."
                         />
                     </div>
                     <div className="border-t border-primary/10">
