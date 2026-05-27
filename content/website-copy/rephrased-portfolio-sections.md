@@ -16,7 +16,7 @@ A concise timeline of talks, workshops, and programs that highlight public-facin
 
 Poster Highlights
 
-Key poster projects presented as compact, scannable cards for quick browsing and citation.
+Compact cards showcasing key poster projects for quick, at-a-glance review.
 
 Awards & Acknowledgements
 
