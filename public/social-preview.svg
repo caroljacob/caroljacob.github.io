@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7ff" />
+      <stop offset="50%" stop-color="#e6f0ff" />
+      <stop offset="100%" stop-color="#e9fbf7" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)" />
+  <g transform="translate(80,120)">
+    <rect x="0" y="0" width="1040" height="390" rx="28" fill="#ffffff" opacity="0.9" />
+    <text x="60" y="120" font-family="Inter, Arial, sans-serif" font-size="56" fill="#0f172a" font-weight="700">Carol Jacob</text>
+    <text x="60" y="180" font-family="Inter, Arial, sans-serif" font-size="28" fill="#374151">Biotechnology portfolio — B.Tech (2022–2026)</text>
+    <text x="60" y="260" font-family="Inter, Arial, sans-serif" font-size="20" fill="#6b7280">Research · Projects · Presentations · Outreach</text>
+  </g>
+</svg>

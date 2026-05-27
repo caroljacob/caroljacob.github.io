@@ -15,7 +15,29 @@ export const metadata: Metadata = {
   icons: {
     icon: "/carol-jacob-icon.svg",
   },
+  openGraph: {
+    title: "Carol Jacob",
+    description: "Carol Jacob - Biotechnology portfolio",
+    url: "https://caroljacob.github.io",
+    siteName: "Carol Jacob",
+    images: [
+      {
+        url: "/social-preview.svg",
+        width: 1200,
+        height: 630,
+        alt: "Carol Jacob — Biotechnology portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Carol Jacob",
+    description: "Carol Jacob - Biotechnology portfolio",
+    images: ["/social-preview.svg"],
+  },
 };
+
 
 export default function RootLayout({
   children,
