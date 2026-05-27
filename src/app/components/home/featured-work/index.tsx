@@ -48,11 +48,9 @@ const FeaturedWork = () => {
                                     tabIndex={0}
                                     aria-pressed={isActive}
                                 >
-                                    <div className={`relative [perspective:1200px] transition-transform duration-500 ease-out ${isActive ? 'scale-[1.01]' : 'scale-100'}`}>
-                                        <div
-                                                className={`relative min-h-[24rem] sm:min-h-[26rem] overflow-hidden transition-transform duration-700 ease-in-out [transform-style:preserve-3d] ${isActive ? '[transform:rotateY(180deg)]' : ''}`}
-                                        >
-                                                <div className={`absolute inset-0 overflow-hidden rounded-[1.75rem] border border-white/30 bg-white shadow-sm [backface-visibility:hidden] transition-opacity duration-300 ${isActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+                                    <div className={`relative transition-transform duration-300 ease-out ${isActive ? 'scale-[1.01]' : 'scale-100'}`}>
+                                        <div className="relative min-h-[24rem] sm:min-h-[26rem] overflow-hidden rounded-[1.75rem]">
+                                            <div className={`absolute inset-0 overflow-hidden rounded-[1.75rem] border border-white/30 bg-white shadow-sm transition-[opacity,transform] duration-300 ease-out ${isActive ? 'opacity-0 translate-y-2 pointer-events-none' : 'opacity-100 translate-y-0'}`}>
                                                 <div className="absolute inset-0">
                                                     {posterSrc ? (
                                                         <Image
@@ -106,59 +104,62 @@ const FeaturedWork = () => {
                                                 </div>
                                             </div>
 
-                                            <div className={`absolute inset-0 rounded-[1.75rem] border border-primary/10 bg-white p-5 sm:p-6 text-primary shadow-sm [backface-visibility:hidden] [transform:rotateY(180deg)] transition-opacity duration-300 ${isActive ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-                                                <div className="relative z-[1] flex h-full flex-col justify-between gap-5">
+                                            <div className={`absolute inset-0 rounded-[1.75rem] border border-primary/15 bg-[linear-gradient(180deg,#eef3f8_0%,#f8fafc_100%)] p-5 sm:p-6 text-primary shadow-md transition-[opacity,transform] duration-300 ease-out ${isActive ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-2 pointer-events-none'}`}>
+                                                <div className="relative z-[1] flex h-full flex-col gap-5 overflow-y-auto">
                                                     <div className="space-y-4">
-                                                        <div className="flex items-center justify-between gap-3 text-secondary">
-                                                            <span className="text-xs tracking-[2px] uppercase">Details</span>
-                                                            <span className="rounded-full border border-primary/10 px-3 py-1 text-xs text-secondary">Click to close</span>
+                                                        <div className="flex items-center justify-between gap-3 text-primary">
+                                                            <span className="text-xs tracking-[2px] uppercase font-semibold">Details</span>
+                                                            <span className="rounded-full border border-primary/10 bg-white px-3 py-1 text-xs text-primary">Click to close</span>
                                                         </div>
-                                                        <h4 className="leading-tight text-primary">{value?.title}</h4>
+                                                        <div className="rounded-[1.25rem] border border-primary/10 bg-white p-4 shadow-sm">
+                                                            <h4 className="leading-tight text-primary">{value?.title}</h4>
+                                                            <p className="mt-2 text-sm text-primary/70">{value?.timeframe} | {value?.association}</p>
+                                                        </div>
                                                     </div>
-                                                    <div className="space-y-3">
-                                                        <p className="text-sm leading-6 text-secondary">{value?.summary}</p>
+                                                    <div className="space-y-3 rounded-[1.25rem] border border-primary/10 bg-white p-4 shadow-sm">
+                                                        <p className="text-sm leading-6 text-primary">{value?.summary}</p>
                                                         <ul className="space-y-2">
                                                             {value?.highlights?.map((item: string, highlightIndex: number) => (
-                                                                <li key={highlightIndex} className="flex items-start gap-2 text-sm text-secondary">
+                                                                <li key={highlightIndex} className="flex items-start gap-2 text-sm text-primary">
                                                                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                                                                     <span>{item}</span>
                                                                 </li>
                                                             ))}
                                                         </ul>
-                                                        <div className="mt-auto flex flex-wrap gap-3 pt-2">
-                                                            {posterSrc ? (
-                                                                <a
-                                                                    href={posterSrc}
-                                                                    target="_blank"
-                                                                    rel="noreferrer"
-                                                                    onClick={(event) => event.stopPropagation()}
-                                                                    className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-white"
-                                                                >
-                                                                    Open poster
-                                                                </a>
-                                                            ) : null}
-                                                            {reportPdfSrc ? (
-                                                                <a
-                                                                    href={reportPdfSrc}
-                                                                    target="_blank"
-                                                                    rel="noreferrer"
-                                                                    onClick={(event) => event.stopPropagation()}
-                                                                    className="rounded-full border border-primary/10 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/5"
-                                                                >
-                                                                    Open PDF
-                                                                </a>
-                                                            ) : null}
-                                                            <button
-                                                                type="button"
-                                                                onClick={(event) => {
-                                                                    event.stopPropagation();
-                                                                    setSelectedItem(value);
-                                                                }}
+                                                    </div>
+                                                    <div className="mt-auto flex flex-wrap gap-3 pt-1">
+                                                        {posterSrc ? (
+                                                            <a
+                                                                href={posterSrc}
+                                                                target="_blank"
+                                                                rel="noreferrer"
+                                                                onClick={(event) => event.stopPropagation()}
                                                                 className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-white"
                                                             >
-                                                                Open viewer
-                                                            </button>
-                                                        </div>
+                                                                Open poster
+                                                            </a>
+                                                        ) : null}
+                                                        {reportPdfSrc ? (
+                                                            <a
+                                                                href={reportPdfSrc}
+                                                                target="_blank"
+                                                                rel="noreferrer"
+                                                                onClick={(event) => event.stopPropagation()}
+                                                                className="rounded-full border border-primary/10 bg-white px-4 py-2 text-sm font-medium text-primary hover:bg-primary/5"
+                                                            >
+                                                                Open PDF
+                                                            </a>
+                                                        ) : null}
+                                                        <button
+                                                            type="button"
+                                                            onClick={(event) => {
+                                                                event.stopPropagation();
+                                                                setSelectedItem(value);
+                                                            }}
+                                                            className="rounded-full bg-primary px-4 py-2 text-sm font-medium text-white"
+                                                        >
+                                                            Open viewer
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
